@@ -1,0 +1,163 @@
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  background-color: #f6f8fa;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+.gh-search {
+  width: 60%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.gh-search__wrap-input {
+  display: flex;
+  position: relative;
+}
+.gh-search__input {
+  flex: 1;
+  border-radius: 0.3rem;
+  border: 1px solid #d0d7de;
+  outline: none;
+  padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+  background-color: #ffffff;
+  color: #24292f;
+  transition:
+    border-color 0.3s ease-in,
+    box-shadow 0.3s ease-in-out;
+}
+.gh-search__input:focus {
+  border-color: #0969da;
+  box-shadow: 0 0 5px rgba(9, 105, 218, 0.3);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.gh-search__clean-input {
+  position: absolute;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: transparent;
+  border: none;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.gh-search__clean-input svg {
+  fill: #57606a;
+  transition:
+    fill 0.1s ease-in,
+    transform 0.1s ease-in;
+}
+.gh-search__clean-input:active svg {
+  transform: scale(0.3) rotate(60deg);
+  fill: #0969da;
+}
+.gh-search__drop-down-btn {
+  background: transparent;
+  text-align: left;
+  border: none;
+  padding: 0.4rem 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+.gh-search__drop-down-item {
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  cursor: pointer;
+  color: #24292f;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+.gh-search__drop-down-item:hover {
+  background-color: #e6f0fa;
+  transform: translateX(0.3rem);
+}
+.gh-search__drop-down-item:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.gh-search__drop-down-item + .gh-search__drop-down-item {
+  border-top: none;
+}
+.gh-search__drop-down-name {
+  font-weight: 600;
+  color: #24292f;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+.gh-search__drop-down-login {
+  color: #57606a;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 30%;
+}
+.gh-search__list-added {
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d0d7de;
+  overflow: hidden;
+}
+.gh-search__list-added-item {
+  position: relative;
+  background-color: #e6f0fa;
+  padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  color: #24292f;
+}
+.gh-search__list-added-item + .gh-search__list-added-item {
+  border-top: 1px solid #d0d7de;
+}
+.gh-search__remove-item {
+  background-color: transparent;
+  border: none;
+  height: 1.4rem;
+  width: 1.4rem;
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+.gh-search__remove-item:active {
+  transform: translateY(-50%) scale(0.9);
+}
+.gh-search__remove-item svg {
+  fill: #0969da;
+}
+.gh-search__repo-name {
+  font-weight: 600;
+  color: #24292f;
+}
+.gh-search__repo-owner {
+  font-size: 0.9rem;
+  color: #57606a;
+}
+.gh-search__repo-stars {
+  font-size: 0.9rem;
+  color: #57606a;
+}

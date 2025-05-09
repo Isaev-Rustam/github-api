@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig", // Схема для автодополнения
+  "display": "Browser", // Метка для браузерной сборки
+  "_version": "23.0.0", // Версия окружения (документация)
+
+  "compilerOptions": {
+    "lib": ["es2024", "DOM", "DOM.Iterable"], // ES2024 + браузерные API
+    "module": "esnext", // Современные модули для бандлеров
+    "target": "es2020", // Выходной код для современных браузеров
+    "sourceMap": true, // Генерация source maps для отладки
+    "strict": true, // Строгая проверка типов
+    "esModuleInterop": true, // Упрощённый импорт CommonJS
+    "skipLibCheck": true, // Пропуск проверки типов в .d.ts
+    "moduleResolution": "bundler", // Разрешение модулей для Vite/Webpack
+    "outDir": "./dist", // Папка для скомпилированных файлов
+    "rootDir": "./src", // Корень исходников
+    "allowJs": true, // Поддержка .js файлов
+    "baseUrl": ".", // База для путей
+    "paths": { "@/*": ["src/*"] }, // Алиасы для импортов
+    "isolatedModules": true // Совместимость с бандлерами
+  },
+  "include": ["src/**/*"], // Включить все файлы в src
+  "exclude": ["node_modules", "**/*.spec.ts", "dist"] // Исключить node_modules, тесты, dist
+}
