@@ -13,5 +13,5 @@ jobs:
       - uses: actions/checkout@v4
       - run: npm ci
       - run: npm run lint
-      - run: format:check
+      - run: npm run format
       - run: npm run build
