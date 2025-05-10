@@ -33,7 +33,7 @@ function inputListener(this: HTMLInputElement): void {
       console.error('Ошибка поиска:', error)
     })
 }
-const a
+
 function dropDownListener(e: Event): void {
   const item = e.target as HTMLElement
   const cleanInput = item.closest('.gh-search__clean-input')
