@@ -13,8 +13,9 @@ export function createSearchContainer(): HTMLDivElement {
          placeholder="Search GitHub repositories..."
          autocomplete="off"
          type="text"
+         tabindex="1"
        />
-       <button class="gh-search__clean-input">
+       <button class="gh-search__clean-input" type='button' tabindex="2">
          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
            <path d="m3.302 4.717 1.415-1.414 15.98 15.98-1.414 1.414z" />
            <path d="m3.303 19.283 15.98-15.98 1.414 1.414-15.98 15.98z" />
