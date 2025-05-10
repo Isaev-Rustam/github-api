@@ -2,9 +2,9 @@ name: GitHub api Actions
 
 on:
   push:
-    branches: [github-actions]
+    branches: [main]
   pull_request:
-    branches: [github-actions]
+    branches: [main]
 
 jobs:
   run-lint:
