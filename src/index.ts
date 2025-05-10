@@ -23,16 +23,14 @@ function inputListener(this: HTMLInputElement): void {
     q: input.value.trim(),
     per_page: 5
   }
-  wrapDebounceSearchRepo
-    .call(this, queryParams)
-    .then(items => {
-      dropDownState = items
-      ghDropDownItems(dropDownState, ghDomContent)
-    })
+  wrapDebounceSearchRepo.call(this, queryParams).then(items => {
+    dropDownState = items
+    ghDropDownItems(dropDownState, ghDomContent)
+  })
 
-    .catch(error => {
-      console.error('Ошибка поиска:', error)
-    })
+  a.catch(error => {
+    console.error('Ошибка поиска:', error)
+  })
 }
 
 function dropDownListener(e: Event): void {
