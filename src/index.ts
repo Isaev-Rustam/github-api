@@ -29,6 +29,7 @@ function inputListener(this: HTMLInputElement): void {
       dropDownState = items
       ghDropDownItems(dropDownState, ghDomContent)
     })
+
     .catch(error => {
       console.error('Ошибка поиска:', error)
     })
