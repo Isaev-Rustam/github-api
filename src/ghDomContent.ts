@@ -46,13 +46,13 @@ export function ghDropDownItems(params: Item[], domItems: HTMLElement): void {
 
   dropDown.innerHTML = ''
 
-  params.forEach(data => {
+  params.forEach((data, i) => {
     const li = document.createElement('li')
     li.classList.add('gh-search__drop-down-item')
     li.id = String(data.id)
     li.insertAdjacentHTML(
       'beforeend',
-      `<button class="gh-search__drop-down-btn" type="button">
+      `<button class="gh-search__drop-down-btn" type="button" tabindex="${3 + i}">
       <span class="gh-search__drop-down-name">${data.name}</span> -
       <span class="gh-search__drop-down-login">${data.owner.login}</span>
     </button>`

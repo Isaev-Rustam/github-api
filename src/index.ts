@@ -40,6 +40,11 @@ function dropDownListener(e: Event): void {
   const removeAddedItem = item.closest('.gh-search__remove-item')
   const dropDownItem = item.closest('.gh-search__drop-down-item')
 
+  const isValidEvent =
+    e.type === 'mouseup' ||
+    (e instanceof KeyboardEvent && (e.key === 'Enter' || e.code === 'Space'))
+
+  if (!isValidEvent) return
   if (cleanInput) clearDropDown(ghDomContent, input)
 
   if (dropDownItem && dropDownState) {
@@ -63,6 +68,7 @@ function dropDownListener(e: Event): void {
   }
 }
 
+ghDomContent.addEventListener('keydown', dropDownListener)
 ghDomContent.addEventListener('mouseup', dropDownListener)
 input.addEventListener('input', inputListener)
 root.append(ghDomContent)
