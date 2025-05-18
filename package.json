@@ -13,6 +13,9 @@
     "lint:fix": "eslint . --ext .ts --fix",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{ts}": "eslint --fix"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
